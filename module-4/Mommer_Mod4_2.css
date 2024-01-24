@@ -1,0 +1,58 @@
+h1 {
+	text-align: center;
+	color: #008080
+}
+h3 {
+	text-align: center;
+	color: #008080;
+	
+}
+#image-gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 10%;
+}
+
+.last {
+	width: 100%;
+	margin-top: 60%;
+	box-sizing: border-box;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #008080;
+  
+  text-align: center;
+}
+figure {
+	text-align: center;
+	color: #008080;
+
+}
+
+figcaption {
+	font-style: italic;
+	font-size: 0.75em;
+}
+
+#last {
+  float: right;
+  margin-bottom: 20px;
+}
+a {
+	font-weight: bold;
+	color: #008080;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #00C5C5;
+}
+a:visited {
+	text-decoration: none;
+	color: #808080;
+}
