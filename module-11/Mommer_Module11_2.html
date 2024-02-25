@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+<h1>Assignment 11.2: JavaScript - Part 3</h1>
+<input type="text" id="input">
+<button onclick="addItem()" class="addBtn">Add</button>
+<button onclick="deleteItem()">Delete Last Entry</button>
+<button onclick="displayAll()">Display</button>
+<hr>
+
+<div id="listItems"></div>
+
+<script>
+    let myList = [];
+    let arrayItems = document.getElementById("listItems");
+
+    function addItem() {
+        let inputBox = document.getElementById("input");
+        let inputText = document.getElementById("input").value;
+        if (inputText === ''){
+            arrayItems.innerText = "Input Required"
+        } else {
+            myList.push(inputText);
+            inputBox.value = "";
+            arrayItems.innerText = "Added '" + inputText + "' at item number " + myList.length;
+        }
+
+    }
+
+    function deleteItem() {
+        if (myList.length === 0) {
+            arrayItems.inner = "No items in the list to delete";
+        } else {
+            let deletedItem = myList.pop();
+            displayAll();
+        }
+    }
+
+    function displayAll() {
+        if (myList.length === 0) {
+            arrayItems.innerText = "List is empty";
+        } else {
+            let displayItems = "";
+            for (let i = 0; i < myList.length; i++) {
+                displayItems += "Item " + (i + 1) + " = " + myList[i] + "<br>";
+            }
+            arrayItems.innerHTML = displayItems;
+        }
+    }
+</script>
+</body>
+</html>
