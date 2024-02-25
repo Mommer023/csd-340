@@ -1,0 +1,65 @@
+<!----Taylor Mommer : Assignment 12.2---->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Development with HTML and CSS</title>
+    <link href="Mommer_Mod12_2.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="container">
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+    <div id="left">
+        <h3>Top 10 Favorite Books</h3>
+        <button onclick="topToBottom()" class="addBtn">Top to Bottom</button>
+        <button onclick="bottomToTop()" class="addBtn">Top to Bottom</button>
+        <hr>
+        <ul id="bookList" >
+        </ul>
+    </div>
+    <div id="right" >
+        <h3>5 Things I've Learned Since the Course Started</h3>
+        <ul>
+            <li>How to use Github</li>
+            <li>How to deploy webpages in GitHub</li>
+            <li>Different Design items needed for websites</li>
+            <li>How important recognition is in web design</li>
+            <li>How to use different elements more fluently</li>
+        </ul>
+    </div>
+    <div style="width: 100%; margin-top: 60%; box-sizing: border-box;">
+    </div>
+    <div id="last">
+        <a href="../index.html">return to landing page</a>
+    </div>
+</div>
+<script>
+    let books = ["The Giver", "In Search of Lost Time", "It Ends With Us",
+        "This Time Tomorrow", "A Child Called It", "The Lost Boy", "A Man Named Dave",
+        "Faceless", "Pretend She's Here", "The Lake"];
+
+    function topToBottom() {
+        let bookList = "";
+        books.forEach(function (book, index) {
+            bookList += "<li>" + (index + 1) + ". " + book + "</li>";
+        });
+        document.getElementById("bookList").innerHTML = bookList;
+    }
+    function bottomToTop() {
+        let reversedBooks = books.slice().reverse();
+        let bookList = "";
+        for (let i = 0; i < reversedBooks.length; i++) {
+            let index = books.length - i;
+            bookList += "<li>" + index + ". " + reversedBooks[i] + "</li>";
+        }
+        document.getElementById("bookList").innerHTML = bookList;
+    }
+    window.onload = function() {
+        topToBottom();
+    };
+</script>
+</body>
+
+</html>
+

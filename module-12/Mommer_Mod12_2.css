@@ -1,0 +1,57 @@
+
+h1 {
+    text-align: center;
+}
+h3 {
+    font-weight: 500;
+}
+
+ol {
+    font-weight: 300;
+    list-style: decimal inside;
+}
+ul {
+    font-weight: 300;
+    list-style: none;
+
+}
+
+
+#left {
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 15px;
+    display: inline-block;
+    width: 45%;
+
+}
+#right {
+
+    padding: 10px;
+    width: 45%;
+    border: 1px dashed red;
+    border-radius: 15px;
+    display: inline-block;
+    width: 45%;
+
+
+}
+#sidebyside {
+    border: 1px solid red;
+    border-radius: 15px;
+
+}
+
+.last {
+    width: 100%;
+    margin-top: 60%;
+    box-sizing: border-box;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#last {
+    float: right;
+    margin-bottom: 20px;
+}
